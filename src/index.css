@@ -1,5 +1,27 @@
 .image {
-  justify-self: center;
-  height: 25rem;
-  width: auto;
-  }
+  height: 250px;
+  position: relative;
+  width: 310px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 19rem;
+  /* height: 40rem; */
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px green;
+  /* position: relative; */
+  /* overflow: hidden; */
+}
+
+.searchbar {
+  flex: 1 1 auto;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
