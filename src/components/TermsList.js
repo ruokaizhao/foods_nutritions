@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 function TermsList({ onTerms }) {
 
   return (
-    <div>
+    <ul>
       {
-        onTerms.map((term) => {
+        Object.keys(onTerms).map((term) => {
           return (
-            <div key={term.id}>
-              <Link to={`/terminology/${term.id}`}>
-              {term.id}
-            </Link>
-            </div>  
+            <li key={term}>
+              <Link to={`/terminology/${term}`}>
+              {term}
+              </Link>
+            </li> 
           )
         })
-      }      
-    </div>    
+      }
+    </ul>        
   )
 }
 

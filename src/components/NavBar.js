@@ -5,15 +5,22 @@ function NavBar() {
     
     return (
         <div>
+          <span>
           <NavLink to="/">
             Home
           </NavLink>
+          </span>
+          <span>
           <NavLink to="/foods">
             Foods
           </NavLink>
+          </span>
+          <span>
           <NavLink to="/terminology">
             Terminology explained
           </NavLink>
+          </span>
+          
         </div>
         
 
