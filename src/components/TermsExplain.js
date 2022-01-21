@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, useRouteMatch } from "react-router-dom"
 import TermsList from "./TermsList"
 import Terms from "./Terms"
 
 function TermsExplain() {
+  const match = useRouteMatch()
 
   const [terms, setTerms] = useState([
     {id: "calorie", calorie: "An ideal daily intake of calories varies depending on age, metabolism and levels of physical activity, among other things. Generally, the recommended daily calorie intake is 2,000 calories a day for women and 2,500 for men."},
@@ -12,7 +13,7 @@ function TermsExplain() {
     {id: "fat", fat: "Total fat. The dietary reference intake (DRI) for fat in adults is 20% to 35% of total calories from fat. That is about 44 grams to 77 grams of fat per day if you eat 2,000 calories a day."}
   ])
 
-  const match = useRouteMatch()
+  
 
   return (
     <div>

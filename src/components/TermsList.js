@@ -4,15 +4,20 @@ import { Link } from "react-router-dom";
 function TermsList({ onTerms }) {
 
   return (
-    onTerms.map((term) => {
-      return (
-        <Link 
-      )
-    })
+    <div>
+      {
+        onTerms.map((term) => {
+          return (
+            <div key={term.id}>
+              <Link to={`/terminology/${term.id}`}>
+              {term.id}
+            </Link>
+            </div>  
+          )
+        })
+      }      
+    </div>    
   )
-
-
-
-
-
 }
+
+export default TermsList
