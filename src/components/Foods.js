@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Foods({ name, image, energy, protein, fat, carbs, category, id }) {
 
