@@ -16,14 +16,12 @@ function TermsExplain() {
 
   return (
     <div>
-      <TermsList />
+      <TermsList onTerms={terms} />
       <Route path={`${match.url}/:termId`}>
         <Terms />
       </Route>
     </div>
     )
-
-
-
-
 }
+
+export default TermsExplain

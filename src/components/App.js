@@ -4,6 +4,7 @@ import Search from './Search';
 import Filter from "./Filter"
 import NavBar from './NavBar';
 import { Route, Switch } from "react-router-dom"
+import TermsExplain from "./TermsExplain"
 
 function App() {
 const[foods, setFoods] = useState([])
@@ -19,6 +20,9 @@ const[filter, setFilter] = useState("all")
       <Switch>
         <Route path="/foods">
           <FoodsList onFoods={foods} onSetFoods={setFoods} search={search} filter={filter} />
+        </Route>
+        <Route path="/terminology">
+          <TermsExplain />
         </Route>
       </Switch>      
     </div>

@@ -5,11 +5,14 @@ function NavBar() {
     
     return (
         <div>
-          <NavLink exact to="/">
+          <NavLink to="/">
             Home
           </NavLink>
           <NavLink to="/foods">
             Foods
+          </NavLink>
+          <NavLink to="/terminology">
+            Terminology explained
           </NavLink>
         </div>
         
