@@ -3,7 +3,9 @@ import React, { useState } from "react";
 function Foods({ name, image, energy, protein, fat, carbs, category }) {
   const [isFavorite, setIsFavorite] = useState(false)
 
-
+  function handleClick() {
+    setIsFavorite((isFavorite) => !isFavorite)
+  }
 
   return (
     <div className="container">
@@ -15,7 +17,9 @@ function Foods({ name, image, energy, protein, fat, carbs, category }) {
       <p>fat: {fat}</p>
       <p>Carbohydrate: {carbs}</p>
       <p>Category: {category}</p>
-
+      <button onClick={handleClick}>
+        {isFavorite? "★" : "☆"}
+      </button>
     </div>
   )
 }
