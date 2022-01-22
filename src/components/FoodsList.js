@@ -10,6 +10,19 @@ function FoodsList({ onFoods, onSetFoods, search, filter }) {
     .then((data) => onSetFoods(data))
   }, [])
 
+  function handleRemove(id) {
+    fetch(`http://localhost:3000/foods/${id}`, {
+      method: "DELETE"
+    })
+    .then((r) => r.json())
+    .then((data) => {
+      const newFoods = onFoods.filter((food) => {
+        return food.id !== id
+      })
+      onSetFoods(newFoods)
+    })
+  }
+
   const searchedFoods = onFoods.filter((food) => {
     if (search === "") {
       return true
@@ -38,7 +51,9 @@ function FoodsList({ onFoods, onSetFoods, search, filter }) {
             protein={food["nutrition-per-100g"].protein}
             fat={food["nutrition-per-100g"].fat}
             carbs={food["nutrition-per-100g"].carbohydrate}
-            category={food.tags} />
+            category={food.tags}
+            id={food.id}
+            onHandleRemove={handleRemove} />
           )            
         })
       }      

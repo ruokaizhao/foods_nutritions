@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 
-function Foods({ name, image, energy, protein, fat, carbs, category }) {
+function Foods({ name, image, energy, protein, fat, carbs, category, id, onHandleRemove }) {
   const [isFavorite, setIsFavorite] = useState(false)
 
   function handleClick() {
     setIsFavorite((isFavorite) => !isFavorite)
+  }
+
+  function handleRemove() {
+    onHandleRemove(id)
   }
 
   return (
@@ -20,6 +24,7 @@ function Foods({ name, image, energy, protein, fat, carbs, category }) {
       <button onClick={handleClick}>
         {isFavorite? "★" : "☆"}
       </button>
+      <button onClick={handleRemove}>Remove</button>
     </div>
   )
 }
