@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 function Foods({ name, image, energy, protein, fat, carbs, category }) {
+  const [isFavorite, setIsFavorite] = useState(false)
+
 
 
   return (
@@ -13,6 +15,7 @@ function Foods({ name, image, energy, protein, fat, carbs, category }) {
       <p>fat: {fat}</p>
       <p>Carbohydrate: {carbs}</p>
       <p>Category: {category}</p>
+
     </div>
   )
 }
