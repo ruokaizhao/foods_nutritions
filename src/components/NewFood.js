@@ -12,6 +12,12 @@ function NewFood({ onFoods, onSetFoods }) {
     }
   })
 
+  function handleChange(e) {
+    const name = e.target.name
+    const value = e.target.value
+    setSubmit({...submit, [name]: value})
+  }
+
 
 
 
