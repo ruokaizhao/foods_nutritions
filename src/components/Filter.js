@@ -6,8 +6,6 @@ function Filter({ onSetFilter }) {
         onSetFilter(e.target.value)
     }
 
-
-
     return (
         <select onChange={handleChange}>
             <option value="all">-</option>
