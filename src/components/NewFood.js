@@ -31,6 +31,8 @@ function NewFood({ onFoods, onSetFoods }) {
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(submit)
     })
+    .then((r) => r.json())
+    .then((data) => onSetFoods([...onFoods, data]))
   }
 
 
