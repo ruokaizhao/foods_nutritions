@@ -25,6 +25,7 @@ function Sort({ onFoods, onSetFoods }) {
         <option value="fat">Fat</option>
         <option value="carbohydrate">Carbohydrate</option>
       </select>
+      <button onClick={handleSort}>Sort</button>
     </div>   
   )
 
