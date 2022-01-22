@@ -9,7 +9,10 @@ function Sort({ onFoods, onSetFoods }) {
   }
 
   function handleIsAscending() {
-    setIsAscending((isAscending) => !isAscending)
+    isAscending ? handleSortAscending() : handleSortDescending()
+    setTimeout(() => {
+      setIsAscending((isAscending) => !isAscending)
+    }, 100);
   }
 
   function handleSortAscending() {
@@ -39,7 +42,7 @@ function Sort({ onFoods, onSetFoods }) {
         <option value="fat">Fat</option>
         <option value="carbohydrate">Carbohydrate</option>
       </select>
-      <button onClick={isAscending ? handleSortAscending : handleSortDescending}>
+      <button onClick={handleIsAscending}>
         {isAscending ? "Sort Ascending" : "Sort Descending"}
       </button>
     </div>   
