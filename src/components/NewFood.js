@@ -81,7 +81,7 @@ function NewFood({ onFoods, onSetFoods }) {
         value={submit["nutrition-per-100g"].carbohydrate}
         onChange={handleNestedChange}
         />
-      <select name="tags" onChange={handleChange}>
+      <select name="tags" defaultValue="fruit" onChange={handleChange}>
           <option value="fruit">fruit</option>
           <option value="legume">legume</option>
           <option value="nut">nut</option>
