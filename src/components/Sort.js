@@ -8,8 +8,8 @@ function Sort({ onFoods, onSetFoods }) {
   }
 
   function handleSort() {
-    const sortedFoods = onFoods.sort(function(a, b) {
-      return a["nutrition-per-100g"][sortValue] - b["nutrition-per-100g"][sortValue]
+    const sortedFoods = [...onFoods].sort(function(a, b) {
+      return b["nutrition-per-100g"][sortValue] - a["nutrition-per-100g"][sortValue]
     })
     onSetFoods(sortedFoods) 
   }
