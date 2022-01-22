@@ -38,8 +38,7 @@ function FoodsList({ onFoods, onSetFoods, search, filter }) {
             protein={food["nutrition-per-100g"].protein}
             fat={food["nutrition-per-100g"].fat}
             carbs={food["nutrition-per-100g"].carbohydrate}
-            category={food.tags}
-            id={food.id} />
+            category={food.tags} />
           )            
         })
       }      
