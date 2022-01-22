@@ -9,7 +9,8 @@ function NewFood({ onFoods, onSetFoods }) {
       protein: "",
       fat: "",
       carbohydrate: ""
-    }
+    },
+    tags: ""
   })
 
   function handleChange(e) {
@@ -80,6 +81,12 @@ function NewFood({ onFoods, onSetFoods }) {
         value={submit["nutrition-per-100g"].carbohydrate}
         onChange={handleNestedChange}
         />
+      <select onChange={handleChange}>
+          <option name="tags" value="fruit">fruit</option>
+          <option name="tags" value="legume">legume</option>
+          <option name="tags" value="nut">nut</option>
+          <option name="tags" value="vegetable">vegetable</option>
+      </select>
       <button type="submit">Submit</button>
     </form>
   )
