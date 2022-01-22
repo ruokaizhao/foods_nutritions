@@ -7,17 +7,25 @@ function Sort({ onFoods, onSetFoods }) {
     setSortValue(e.target.value)
   }
 
-  const sortedFoods = onFoods.sort
+  function handleSort() {
+    const sortedFoods = onFoods.sort(function(a, b) {
+      return a["nutrition-per-100g"][sortValue] - b["nutrition-per-100g"][sortValue]
+    })
+    onSetFoods(sortedFoods) 
+  }
+  
 
 
 
   return (
-    <select onChange={handleChange}>
-      <option value="energy">Energy</option>
-      <option value="protein">Protein</option>
-      <option value="fat">Fat</option>
-      <option value="carbohydrate">Carbohydrate</option>
-    </select>
+    <div>
+      <select onChange={handleChange}>
+        <option value="energy">Energy</option>
+        <option value="protein">Protein</option>
+        <option value="fat">Fat</option>
+        <option value="carbohydrate">Carbohydrate</option>
+      </select>
+    </div>   
   )
 
 }
