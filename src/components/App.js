@@ -20,7 +20,7 @@ const[filter, setFilter] = useState("all")
         <Route path="/foods">
           <Search onSetSearch={setSearch} />
           <Filter onSetFilter={setFilter} />
-          <NewFood />
+          <NewFood onFoods={foods} onSetFoods={setFoods}/>
           <FoodsList onFoods={foods} onSetFoods={setFoods} search={search} filter={filter} />
         </Route>
         <Route path="/terminology">
