@@ -5,6 +5,7 @@ import Filter from "./Filter"
 import NavBar from './NavBar';
 import { Route, Switch } from "react-router-dom"
 import TermsExplain from "./TermsExplain"
+import NewFood from './NewFood';
 
 function App() {
 const[foods, setFoods] = useState([])
@@ -19,6 +20,7 @@ const[filter, setFilter] = useState("all")
         <Route path="/foods">
           <Search onSetSearch={setSearch} />
           <Filter onSetFilter={setFilter} />
+          <NewFood />
           <FoodsList onFoods={foods} onSetFoods={setFoods} search={search} filter={filter} />
         </Route>
         <Route path="/terminology">
