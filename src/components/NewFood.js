@@ -24,7 +24,14 @@ function NewFood({ onFoods, onSetFoods }) {
     setSubmit({...submit, ["nutrition-per-100g"]: {...submit["nutrition-per-100g"], [name]: value}})
   }
 
-
+  function handleSubmit(e) {
+    e.preventDefault()
+    fetch("http://localhost:3000/foods", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(submit)
+    })
+  }
 
 
   return (
