@@ -18,6 +18,12 @@ function NewFood({ onFoods, onSetFoods }) {
     setSubmit({...submit, [name]: value})
   }
 
+  function handleNestedChange(e) {
+    const name = e.target.name
+    const value = e.target.value
+    setSubmit({...submit, ["nutrition-per-100g"]: {...submit["nutrition-per-100g"], [name]: value}})
+  }
+
 
 
 
