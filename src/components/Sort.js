@@ -8,6 +8,9 @@ function Sort({ onFoods, onSetFoods }) {
     setSortValue(e.target.value)
   }
 
+  function handleIsAscending() {
+    setIsAscending((isAscending) => !isAscending)
+  }
 
   function handleSortAscending() {
     const sortedFoods = [...onFoods].sort(function(a, b) {
