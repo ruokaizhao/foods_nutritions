@@ -28,5 +28,6 @@ function Sort({ onFoods, onSetFoods }) {
       <button onClick={handleSort}>Sort</button>
     </div>   
   )
-
 }
+
+export default Sort
