@@ -252,22 +252,6 @@
       "tags": "vegetable"
     },
     {
-      "id": 15,
-      "name": "Bok Choy",
-      "url": "https://www.mashed.com/img/gallery/what-is-bok-choy-and-which-part-can-you-eat/l-intro-1621618217.jpg",
-      "nutrition-per-100g": {
-        "energy": 54,
-        "carbohydrate": 2.2,
-        "dietary-fibre": 1,
-        "fat": 0.2,
-        "protein": 1.5,
-        "vitamin-a": 243,
-        "vitamin-c": 45,
-        "calcium": 105
-      },
-      "tags": "vegetable"
-    },
-    {
       "id": 16,
       "name": "Brussels Sprouts",
       "url": "https://images.immediate.co.uk/production/volatile/sites/30/2021/12/Bowl-of-sprouts-8305212.jpg",
@@ -440,6 +424,18 @@
         "sodium": 300
       },
       "tags": "nut"
+    },
+    {
+      "name": "aka",
+      "url": "kk",
+      "nutrition-per-100g": {
+        "energy": "kk",
+        "protein": "kk",
+        "fat": "kk",
+        "carbohydrate": "kk"
+      },
+      "tags": "legume",
+      "id": 26
     }
   ]
 }

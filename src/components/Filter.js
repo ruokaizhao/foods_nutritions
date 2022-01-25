@@ -1,9 +1,9 @@
 import React from "react";
 
-function Filter({ onSetFilter }) {
+function Filter({ setFilter }) {
 
     function handleChange(e) {
-        onSetFilter(e.target.value)
+        setFilter(e.target.value)
     }
 
     return (

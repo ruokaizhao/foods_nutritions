@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Sort({ onFoods, onSetFoods }) {
+function Sort({ foods, setFoods }) {
   const [isAscending, setIsAscending] = useState(false)
   const [sortValue, setSortValue] = useState("energy")
 
@@ -16,17 +16,17 @@ function Sort({ onFoods, onSetFoods }) {
   }
 
   function handleSortAscending() {
-    const sortedFoods = [...onFoods].sort(function(a, b) {
+    const sortedFoods = [...foods].sort(function(a, b) {
       return a["nutrition-per-100g"][sortValue] - b["nutrition-per-100g"][sortValue]
     })
-    onSetFoods(sortedFoods) 
+    setFoods(sortedFoods) 
   }
 
   function handleSortDescending() {
-    const sortedFoods = [...onFoods].sort(function(a, b) {
+    const sortedFoods = [...foods].sort(function(a, b) {
       return b["nutrition-per-100g"][sortValue] - a["nutrition-per-100g"][sortValue]
     })
-    onSetFoods(sortedFoods) 
+    setFoods(sortedFoods) 
   }
 
   return (

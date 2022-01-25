@@ -17,7 +17,7 @@ function TermsExplain() {
 
   return (
     <div>
-      <TermsList onTerms={terms} />
+      <TermsList terms={terms} />
       <Route path={`${match.url}/:termId`}>
         <Terms onTerms={terms} />
       </Route>

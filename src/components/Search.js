@@ -16,7 +16,7 @@ function Search({ onSetSearch }) {
 
     return (
         <form className="searchbar" onSubmit={handleSubmit}>
-          <label for="search">Search your favorite food</label>
+          <label htmlFor="search">Search your favorite food</label>
           <input
             type="text"
             id="search"

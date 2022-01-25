@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Foods from "./Foods"
 
-function FoodsList({ onFoods, onSetFoods, search, filter }) {
+function FoodsList({ foods, setFoods, search, filter }) {
 
   useEffect(() => {
     document.title = "Foods Nutritions"
@@ -16,14 +16,14 @@ function FoodsList({ onFoods, onSetFoods, search, filter }) {
     })
     .then((r) => r.json())
     .then((data) => {
-      const newFoods = onFoods.filter((food) => {
+      const newFoods = foods.filter((food) => {
         return food.id !== id
       })
-      onSetFoods(newFoods)
+      setFoods(newFoods)
     })
   }
 
-  const searchedFoods = onFoods.filter((food) => {
+  const searchedFoods = foods.filter((food) => {
     if (search === "") {
       return true
     } else {
