@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function TermsList({ onTerms }) {
+function TermsList({ terms }) {
 
   return (
     <ul>
       {
-        Object.keys(onTerms).map((term) => {
+        Object.keys(terms).map((term) => {
           return (
             <li key={term}>
               <Link to={`/terminology/${term}`}>

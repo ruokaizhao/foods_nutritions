@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function NewFood({ foods, setFoods }) {
-  const [formData, setFormdata] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     url: "",
     "nutrition-per-100g": {
@@ -16,13 +16,13 @@ function NewFood({ foods, setFoods }) {
   function handleChange(e) {
     const name = e.target.name
     const value = e.target.value
-    setSubmit({...formData, [name]: value})
+    setFormData({...formData, [name]: value})
   }
 
   function handleNestedChange(e) {
     const name = e.target.name
     const value = e.target.value
-    setSubmit({...formData, ["nutrition-per-100g"]: {...formData["nutrition-per-100g"], [name]: value}})
+    setFormData({...formData, ["nutrition-per-100g"]: {...formData["nutrition-per-100g"], [name]: value}})
   }
 
   function handleSubmit(e) {
@@ -34,7 +34,7 @@ function NewFood({ foods, setFoods }) {
     })
     .then((r) => r.json())
     .then((data) => setFoods([...foods, data]))
-    .then((data) => setSubmit({
+    .then((data) => setFormData({
         name: "",
         url: "",
         "nutrition-per-100g": {

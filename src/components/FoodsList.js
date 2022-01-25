@@ -7,7 +7,7 @@ function FoodsList({ foods, setFoods, search, filter }) {
     document.title = "Foods Nutritions"
     fetch("http://localhost:3000/foods")
     .then((r) => r.json())
-    .then((data) => onSetFoods(data))
+    .then((data) => setFoods(data))
   }, [])
 
   function handleRemove(id) {
