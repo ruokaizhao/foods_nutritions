@@ -171,3 +171,8 @@ body {
   background-color: green;
   color: white;
 }
+
+.terms {
+  width: 60%;
+  margin: 50px;
+}

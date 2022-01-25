@@ -5,7 +5,7 @@ function Terms({ onTerms }) {
   const params = useParams()
 
   return (
-    <h3>{onTerms[params.termId]}</h3>
+    <h3 className="terms">{onTerms[params.termId]}</h3>
   )
 
 
