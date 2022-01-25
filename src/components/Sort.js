@@ -29,13 +29,9 @@ function Sort({ onFoods, onSetFoods }) {
     onSetFoods(sortedFoods) 
   }
 
-  
-  
-
-
-
   return (
-    <div>
+    <div className="sort-food">
+      <p>Sort food by property</p>
       <select onChange={handleChange}>
         <option value="energy">Energy</option>
         <option value="protein">Protein</option>

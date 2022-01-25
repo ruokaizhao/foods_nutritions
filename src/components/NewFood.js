@@ -34,15 +34,28 @@ function NewFood({ onFoods, onSetFoods }) {
     })
     .then((r) => r.json())
     .then((data) => onSetFoods([...onFoods, data]))
+    .then((data) => setSubmit({
+        name: "",
+        url: "",
+        "nutrition-per-100g": {
+          energy: "",
+          protein: "",
+          fat: "",
+          carbohydrate: ""
+        },
+        tags: "fruit"
+      }))
   }
 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="new-food" onSubmit={handleSubmit}>
+      <label for="new-food-input">Submit your own food</label>
       <input 
         type="text" 
         placeholder="Enter food name" 
         name="name" 
+        id="new-food-input"
         value={submit.name}
         onChange={handleChange}
         />

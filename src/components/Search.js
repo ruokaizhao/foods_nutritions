@@ -10,12 +10,13 @@ function Search({ onSetSearch }) {
     function handleSubmit(e) {
         e.preventDefault()
         onSetSearch(input)
+        setInput("")
     }
-
 
 
     return (
         <form className="searchbar" onSubmit={handleSubmit}>
+          <label for="search">Search your favorite food</label>
           <input
             type="text"
             id="search"
@@ -23,7 +24,7 @@ function Search({ onSetSearch }) {
             value={input}
             onChange={handleChange}
           />
-          <button type="submit">🔍</button>
+          <button type="submit">Search!</button>
         </form>
       );
 }

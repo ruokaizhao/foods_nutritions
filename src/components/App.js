@@ -17,13 +17,13 @@ const[filter, setFilter] = useState("all")
 
 
   return (
-    <div className="App">
+    <div>
       <NavBar />
       <Switch>
         <Route path="/foods">
           <Search onSetSearch={setSearch} />
-          <Filter onSetFilter={setFilter} />
           <NewFood onFoods={foods} onSetFoods={setFoods}/>
+          <Filter onSetFilter={setFilter} />
           <Sort onFoods={foods} onSetFoods={setFoods} />
           <FoodsList onFoods={foods} onSetFoods={setFoods} search={search} filter={filter} />
         </Route>
