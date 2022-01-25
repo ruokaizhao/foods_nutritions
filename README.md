@@ -4,6 +4,22 @@ This project is the phase-2 put it all together project using React to build a f
 
 The data used in this project is about foods nutritions such as calorie, protein, fat, etc..
 
+## Installation
+
+Clone the repo and in the root directory of this repo, run:
+
+```bash
+npm install
+```
+
+which will install all the dependencies of the project, then run:
+
+```bash
+npm start
+```
+
+to start the application.
+
 On the start, the user is on the Home page with a welcoming message, there are three links on the top left of the page, upon clicking, each one will take user to different page of the application, and the url in the browser's address bar will change accordingly.
 
 The Foods page renders severing things:
@@ -27,3 +43,9 @@ On the bottom of each card, there are two buttons:
 2. A Remove button, upon clicking, will remove the card for the food from the page, along deleting it in the backend.
 
 The Terminology page will bring user to a page with 4 links, upon clicking, each link will bring a short explanation of the word, also the url in the browser's address bar will change accordingly.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
