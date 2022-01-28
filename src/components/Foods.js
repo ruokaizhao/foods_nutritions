@@ -22,7 +22,7 @@ function Foods({ name, image, energy, protein, fat, carbs, category, id, onHandl
       <p>Carbohydrate: {carbs}</p>
       <p>Category: {category}</p>
       <button className="favorite" onClick={handleClick}>
-        {isFavorite? "★" : "☆"}
+        {isFavorite ? "★" : "☆"}
       </button>
       <button onClick={handleRemove}>Remove</button>
     </div>

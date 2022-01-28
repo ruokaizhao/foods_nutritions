@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Foods from "./Foods"
 
-function FoodsList({ foods, setFoods, search, filter }) {
+function FoodsList({ foods, setFoods, filteredFoods }) {
 
   useEffect(() => {
     document.title = "Foods Nutritions"
@@ -23,21 +23,6 @@ function FoodsList({ foods, setFoods, search, filter }) {
     })
   }
 
-  const searchedFoods = foods.filter((food) => {
-    if (search === "") {
-      return true
-    } else {
-      return food.name.toLowerCase().includes(search.toLowerCase())
-    }
-  })
-
-  const filteredFoods = searchedFoods.filter((food) => {
-    if (filter === "all") {
-      return true
-    } else {
-      return food.tags === filter
-    }
-  })
 
   return (
     <div>

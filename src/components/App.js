@@ -13,6 +13,21 @@ const[foods, setFoods] = useState([])
 const[search, setSearch] = useState("")
 const[filter, setFilter] = useState("all")
 
+const searchedFoods = foods.filter((food) => {
+  if (search === "") {
+    return true
+  } else {
+    return food.name.toLowerCase().includes(search.toLowerCase())
+  }
+})
+
+const filteredFoods = searchedFoods.filter((food) => {
+  if (filter === "all") {
+    return true
+  } else {
+    return food.tags === filter
+  }
+})
 
 
   return (
@@ -24,7 +39,7 @@ const[filter, setFilter] = useState("all")
           <NewFood foods={foods} setFoods={setFoods}/>
           <Filter setFilter={setFilter} />
           <Sort foods={foods} setFoods={setFoods} />
-          <FoodsList foods={foods} setFoods={setFoods} search={search} filter={filter} />
+          <FoodsList foods={foods} setFoods={setFoods} filteredFoods={filteredFoods} />
         </Route>
         <Route path="/terminology">
           <TermsExplain />
