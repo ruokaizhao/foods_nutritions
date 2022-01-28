@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router-dom"
 import TermsExplain from "./TermsExplain"
 import NewFood from './NewFood';
 import Sort from "./Sort"
+import Counttype from "./CountLettertyped"
 
 function App() {
 const[foods, setFoods] = useState([])
@@ -71,6 +72,7 @@ function handleSortDescending(sortValue) {
         </Route>
         <Route exact path="/">
           <h1>Welcome to the world of food nutritions!</h1>
+          <Counttype />
         </Route>
       </Switch>      
     </div>

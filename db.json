@@ -1,22 +1,6 @@
 {
   "foods": [
     {
-      "id": 1,
-      "name": "Hummus",
-      "url": "https://www.thespruceeats.com/thmb/aHxaW94LyyXtqFG4aP_V6ZJRo2Q=/4600x3066/filters:no_upscale():max_bytes(150000):strip_icc()/white-bean-hummus-dip-3377730-hero-04-582e42dcd1914d3b9f246f645e10b22d.jpg",
-      "nutrition-per-100g": {
-        "energy": 709,
-        "protein": 8.4,
-        "fat": 10.8,
-        "saturated-fat": 1.8,
-        "dietary-fibre": 11,
-        "carbohydrate": 4.6,
-        "sugars": 0.6,
-        "sodium": 378
-      },
-      "tags": "legume"
-    },
-    {
       "id": 2,
       "name": "Peanut Butter",
       "url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/peanut-butter-vegan-1556206811.jpg?crop=1.00xw:0.754xh;0,0.158xh&resize=1200:*",
