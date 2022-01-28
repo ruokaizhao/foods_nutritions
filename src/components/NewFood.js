@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function NewFood({ foods, setFoods }) {
+function NewFood({ addFood }) {
   const [formData, setFormData] = useState({
     name: "",
     url: "",
@@ -33,8 +33,8 @@ function NewFood({ foods, setFoods }) {
       body: JSON.stringify(formData)
     })
     .then((r) => r.json())
-    .then((data) => setFoods([...foods, data]))
-    .then((data) => setFormData({
+    .then((data) => addFood(data))
+    .then(() => setFormData({
         name: "",
         url: "",
         "nutrition-per-100g": {

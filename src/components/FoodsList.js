@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Foods from "./Foods"
 
-function FoodsList({ foods, setFoods, filteredFoods }) {
+function FoodsList({ setFoods, filteredFoods, deleteFood }) {
 
   useEffect(() => {
     document.title = "Foods Nutritions"
@@ -15,12 +15,7 @@ function FoodsList({ foods, setFoods, filteredFoods }) {
       method: "DELETE"
     })
     .then((r) => r.json())
-    .then((data) => {
-      const newFoods = foods.filter((food) => {
-        return food.id !== id
-      })
-      setFoods(newFoods)
-    })
+    .then(() => deleteFood(id))
   }
 
 

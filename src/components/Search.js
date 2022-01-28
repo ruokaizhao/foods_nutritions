@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Search({ onSetSearch }) {
+function Search({ setSearch }) {
     const[input, setInput] = useState("")
 
     function handleChange(e) {
@@ -9,13 +9,13 @@ function Search({ onSetSearch }) {
 
     function handleSubmit(e) {
         e.preventDefault()
-        onSetSearch(input)
+        setSearch(input)
         setInput("")
     }
 
 
     return (
-        <form className="searchbar" onSubmit={handleSubmit}>
+        <form className="search-food" onSubmit={handleSubmit}>
           <label htmlFor="search">Search your favorite food</label>
           <input
             type="text"

@@ -29,17 +29,42 @@ const filteredFoods = searchedFoods.filter((food) => {
   }
 })
 
+function addFood(food) {
+  const newFoods = [...foods, food]
+  setFoods(newFoods)
+}
+
+function deleteFood(id) {
+  const newFoods = foods.filter((food) => {
+    return food.id !== id
+  })
+  setFoods(newFoods)
+}
+
+function handleSortAscending(sortValue) {
+  const sortedFoods = [...foods].sort(function(a, b) {
+    return a["nutrition-per-100g"][sortValue] - b["nutrition-per-100g"][sortValue]
+  })
+  setFoods(sortedFoods) 
+}
+
+function handleSortDescending(sortValue) {
+  const sortedFoods = [...foods].sort(function(a, b) {
+    return b["nutrition-per-100g"][sortValue] - a["nutrition-per-100g"][sortValue]
+  })
+  setFoods(sortedFoods) 
+}
 
   return (
     <div>
       <NavBar />
       <Switch>
         <Route path="/foods">
-          <Search onSetSearch={setSearch} />
-          <NewFood foods={foods} setFoods={setFoods}/>
+          <Search setSearch={setSearch} />
+          <NewFood addFood={addFood} />
           <Filter setFilter={setFilter} />
-          <Sort foods={foods} setFoods={setFoods} />
-          <FoodsList foods={foods} setFoods={setFoods} filteredFoods={filteredFoods} />
+          <Sort handleSortAscending={handleSortAscending} handleSortDescending={handleSortDescending} />
+          <FoodsList setFoods={setFoods} filteredFoods={filteredFoods} deleteFood={deleteFood} />
         </Route>
         <Route path="/terminology">
           <TermsExplain />
