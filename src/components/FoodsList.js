@@ -5,6 +5,8 @@ function FoodsList({ setFoods, filteredFoods, deleteFood }) {
 
   useEffect(() => {
     document.title = "Foods Nutritions"
+    // Since this side-effect will only run after the Foods component renders, the above line of code will only work
+    // after user clicks on the Foods link on the Home page, since only then will the Foods component renders.
     fetch("http://localhost:3000/foods")
     .then((r) => r.json())
     .then((data) => setFoods(data))
